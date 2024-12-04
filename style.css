@@ -1,0 +1,320 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #D3D3D3;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: #D3D3D3;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  header .logo h1 {
+    margin-left: 10px;
+    font-size: 24px;
+    color: #2a637a;
+  }
+  
+  nav ul {
+    display: flex;
+    list-style: none;
+  }
+  
+  nav ul li {
+    margin-left: 20px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #2a637a;
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  nav ul li a:hover {
+    background-color: #2a637a;
+    color: #ffffff;
+  }
+  
+  main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  /* Primeira seção */
+  .intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 99%;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  
+  .images {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .images img {
+    width: 100%;
+    height: 100% ;
+    border-radius: 10px;
+  }
+  
+  .description {
+
+    margin-left: 20px;
+    background-color: #2a637a;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .description h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .description p {
+    font-size: 18px;
+  }
+  
+  /* Segunda seção */
+  .sobre {
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+  }
+  
+  .sobre h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #2a637a;
+    margin-bottom: 20px;
+  }
+  
+  .sobre .content {
+    display: flex;
+    height: 90%;
+    gap: 20px;
+  }
+  
+  .left-box, .right-box {
+    flex: 1;
+    background-color: #2a637a;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .left-box ul {
+    margin-top: 20px;
+    padding-left: 20px;
+  }
+  
+  .left-box ul li {
+    margin-bottom: 10px;
+  }
+  
+  .right-box h3 {
+    margin-top: 20px;
+  }
+  
+  
+  /* Terceira seção */
+  .teorias {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .teorias h2 {
+    font-size: 28px;
+    color: #2a637a;
+    margin-bottom: 20px;
+  }
+  
+  .theory-cards {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    background-color: #2a637a;
+    color: #ffffff;
+    border-radius: 10px;
+    padding: 15px;
+    flex: 1;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .card img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .card h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+  
+  .card p {
+    font-size: 16px;
+    line-height: 1.4;
+  }
+  
+  .card a {
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-top: 10px;
+    display: inline-block;
+  }
+  
+  .card a:hover {
+    text-decoration: none;
+  }
+  
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 640px) {
+    header {
+    flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      padding: 5px;
+      height: 8%;
+    }
+  
+    nav ul {
+      flex-direction: row;
+      gap: 10px;
+      padding: 20px;
+    }
+  
+    nav ul li {
+      margin-left: 0;
+    }
+  
+    .intro {
+      flex-direction: column;
+      align-items: center;
+      padding: 12px;
+    }
+  
+    .description {
+      margin-left: 0;
+      margin-top: 20px;
+      padding: 15px;
+    }
+  
+    .images {
+        width: 10%;
+    }
+    .images img {
+      width: 80px;
+    }
+  
+    .sobre .content {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .content{
+        width: 100%;
+        height: 50%;
+    }
+  
+    .left-box, .right-box {
+      padding: 15px;
+    }
+  
+    .sobre h2 {
+      font-size: 24px;
+    }
+  
+    .description h2 {
+      font-size: 20px;
+    }
+  
+    .description p, .left-box ul li, .right-box h3 {
+      font-size: 14px;
+    }
+  }
+
+
+    .teorias {
+      padding: 10px;
+    }
+  
+    .theory-cards {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .card {
+      max-width: 100%;
+      margin-bottom: 20px; 
+    }
+  
+    .card img {
+      width: 80px; 
+    }
+  
+    .card h3 {
+      font-size: 18px; 
+    }
+  
+    .card p {
+      font-size: 14px; 
+    }
+    
